@@ -1,0 +1,30 @@
+extends layout/index
+
+block content
+    main.container.mt-5
+        h1.mt-5.text-center #{pagina}
+        include ./layout/testimonials_block.pug 
+
+        div.row 
+            .col-md-12
+                h2.d-block.w-100.text-center Agrega un Testimonial
+                if errors
+                    each error in errors
+                        div.alert.col.alert-danger.text-center= error.mensaje 
+
+            div.row.justify-content-center.col
+                div.col.md-8
+                    form(action="", method="post")
+                        div.form-group
+                            label(for="name") Nombre 
+                            input.form-control#name(type="text", name="name", placeholder="Escriba su Nombre", value = name, maxlength="10")
+
+                        div.form-group
+                            label(for="email") Correo 
+                            input.form-control#email(type="email", name="email", placeholder="Escriba su email", value = email,maxlength="20")
+
+                        div.form-group
+                            label(for="message") Mensaje 
+                            textarea.form-control#message(type="text", name="message", placeholder="Escriba su mensaje",rows=3, maxlength="100")=message
+                        
+                        input.btn.btn-success.btn-block(type="submit")

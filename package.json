@@ -1,0 +1,24 @@
+{
+  "name": "54-agencia-de-viajes",
+  "version": "1.0.0",
+  "description": "Agencia de Viajes con Node",
+  "main": "index.js",
+  "scripts": {
+    "serverDev": "nodemon server/config",
+    "start": "node server/config"
+  },
+  "type": "module",
+  "author": "Cristian Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "git": "^0.1.5",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.16.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

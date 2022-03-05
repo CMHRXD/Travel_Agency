@@ -1,0 +1,11 @@
+div.row.testimoniales
+    each testimonial in data
+        div.col-md-6.col-lg-4.mb-4 
+            .card 
+                .card-body 
+                    blockquote.bockquoute 
+                    p.mb-0 
+                        |#{testimonial.message}
+                    footer.blockquote-footer 
+                        |#{testimonial.name}
+
