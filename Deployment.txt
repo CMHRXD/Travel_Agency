@@ -1,0 +1,23 @@
+•	Instalamos dotenv para las variables de entorno de nuestra BD con el comando npm install dotenv
+    o	Configuramos variables de entorno 
+
+•	Definir el puerto y el host para el servidor en el archivo index.js
+
+•	Creamos nuestro repositorio y alzamos el proyecto.
+
+•	Creamos una app en HEROKU heroku create –remote production
+
+•	Alzar nuestro proyecto a heroku git push production master
+
+•	En el panel de la app vamos a la parte de Resources y buscamos clearDB Mysql e instalamos.
+
+•	En setting accedemos a las config Vars donde se encuentra una url con toda la información de nuestra base de datos.
+ 
+•	Hacemos un volcado de nuestra BD en la consola(cmd no powershell pq este último añade unas pequeñas configuraciones con las cuales podemos tener conficto, sin embargo el cmd deja que el comando mysqldump se encargue completamente del proceso)
+    o	Mysqldump -u root -p travelagency > travelagency.sql
+
+•	Nos conectamos a la base de datos de heroku 
+    o	mysql -u b389410efb21d4 -h us-cdbr-east-02.cleardb.com -p heroku_7404b363ec936ad
+        o	Una vez conectados y en la consola de la bd ejecutamos el comando SOURCE ./travelagency.sql
+
+•	Configuramos las variables de entorno en heroku 
