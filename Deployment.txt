@@ -17,7 +17,7 @@
     o	Mysqldump -u root -p travelagency > travelagency.sql
 
 •	Nos conectamos a la base de datos de heroku 
-    o	mysql -u b389410efb21d4 -h us-cdbr-east-02.cleardb.com -p heroku_7404b363ec936ad
+    o	mysql -u username -h hostname.com -p bd_name
         o	Una vez conectados y en la consola de la bd ejecutamos el comando SOURCE ./travelagency.sql
 
 •	Configuramos las variables de entorno en heroku 
